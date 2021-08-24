@@ -1,6 +1,6 @@
 // High Order Component
 import ListView from './ListView.vue';
-import Bus from '../utils/bus.js';
+import Bus from '../utils/bus';
 
 export default function createListView(name) {
   return {
