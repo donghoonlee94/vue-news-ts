@@ -1,8 +1,9 @@
 // High Order Component
 import ListView from './ListView.vue';
 import Bus from '../utils/bus';
+import { CreateElement } from 'vue/types/umd';
 
-export default function createListView(name) {
+export default function createListView(name: String) {
   return {
     // 재사용할 인스턴스(컴포넌트) 옵션들이 들어갈 자리
     name,
@@ -19,7 +20,7 @@ export default function createListView(name) {
         });
     },
     // ListView Component render
-    render(createElement) {
+    render(createElement: CreateElement) {
       return createElement(ListView);
     },
   };
