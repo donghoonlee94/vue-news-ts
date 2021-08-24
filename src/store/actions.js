@@ -1,11 +1,4 @@
-import {
-  fetchNewsList,
-  fetchAskList,
-  fetchJobsList,
-  fetchUserInfo,
-  fetchCommentItem,
-  fetchList,
-} from '../api/index.js';
+import { fetchNewsList, fetchAskList, fetchJobsList, fetchUserInfo, fetchCommentItem, fetchList } from '../api/index';
 
 export default {
   // context = store의 메소드와 속성을 가지고 있어서 commit, state,mutations 으로 접근이 가능함.

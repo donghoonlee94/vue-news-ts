@@ -24,13 +24,14 @@ export default new VueRouter({
       component: NewsView,
       beforeEnter: async (to: Route, from: Route, next: NavigationGuardNext<Vue>) => {
         Bus.$emit('start:spinner');
-        try {
-          await store.dispatch('FETCH_LIST', to.name);
-          next();
-        } catch (error) {
-          console.log(error);
-          next('/');
-        }
+        // try {
+        //   await store.dispatch('FETCH_LIST', to.name);
+        //   next();
+        // } catch (error) {
+        //   console.log(error);
+        //   next('/');
+        // }
+        next();
       },
     },
     {

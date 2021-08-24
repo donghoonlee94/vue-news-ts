@@ -1,16 +1,16 @@
 <template>
   <div>
-    <ListItem></ListItem>
+    <ListView></ListView>
   </div>
 </template>
 
 <script>
-import ListItem from '../components/ListItem.vue';
+import ListView from './ListView.vue';
 import ListMixin from '../mixins/ListMixin.js';
 
 export default {
   components: {
-    ListItem,
+    ListView,
   },
   mixins: [ListMixin],
 };
