@@ -22,7 +22,7 @@
             </template>
           </p>
           <small class="link-text">
-            {{ item.time_ago }}
+            {{ timeAgo(item) }}
             by
             <router-link v-if="item.user" :to="`/user/${item.user}`" class="link-text">
               {{ item.user }}
@@ -46,6 +46,16 @@ export default Vue.extend({
       type: Array as PropType<NewsItem[]>,
       required: true,
     },
+  },
+  methods: {
+    timeAgo(news: NewsItem): string {
+      return news.time_ago.concat('2021');
+    },
+  },
+  computed: {
+    // timeAgo(): string {
+    //   return this.items[0].time_ago.concat();
+    // },
   },
 });
 </script>
