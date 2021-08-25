@@ -37,15 +37,17 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { NewsItem } from '@/api';
+import Vue, { PropType } from 'vue';
+export default Vue.extend({
   props: {
     items: {
-      type: Array,
+      type: Array as PropType<NewsItem[]>,
       required: true,
     },
   },
-};
+});
 </script>
 
 <style scoped>

@@ -1,20 +1,33 @@
-import axios from 'axios';
+import axios, { AxiosPromise } from 'axios';
 
 // 1. HTTP Request * Response와 관련된 기본 설정
 const config = {
   baseUrl: 'https://api.hnpwa.com/v0/',
 };
 
+export interface NewsItem {
+  comments_count: number;
+  domain: string;
+  id: number;
+  points: number;
+  time: number;
+  time_ago: string;
+  title: string;
+  type: string;
+  url: string;
+  user: string;
+}
+
 // 2. API 함수들을 정리
 // async로 error 처리
-async function fetchNewsList() {
-  //return axios.get('https://api.hnpwa.com/v0/news/1.json')
-  try {
-    const response = await axios.get(`${config.baseUrl}news/1.json`);
-    return response;
-  } catch (error) {
-    console.log(error);
-  }
+function fetchNewsList(): AxiosPromise<NewsItem[]> {
+  return axios.get('https://api.hnpwa.com/v0/news/1.json');
+  // try {
+  //   const response = await axios.get(`${config.baseUrl}news/1.json`);
+  //   return response;
+  // } catch (error) {
+  //   console.log(error);
+  // }
 }
 
 // await을 바로 리턴

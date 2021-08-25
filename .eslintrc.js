@@ -24,5 +24,6 @@ module.exports = {
       },
     ],
     quotes: ['error', 'single'],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
 };
