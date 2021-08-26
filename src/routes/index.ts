@@ -6,7 +6,7 @@ import AskView from '../views/AskView.vue';
 import ItemView from '../views/ItemView.vue';
 import UserView from '../views/UserView.vue';
 import Bus from '../utils/bus';
-import store from '../store/index.js';
+import store from '../store/index';
 
 Vue.use(VueRouter);
 
