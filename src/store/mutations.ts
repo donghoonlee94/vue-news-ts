@@ -1,11 +1,12 @@
 import { NewsItem } from '@/api';
+import { MutationTree } from 'vuex';
 import { RootState } from './state';
 
 enum MutaionTypes {
   SET_NEWS = 'SET_NEWS',
 }
 
-const mutations = {
+const mutations: MutationTree<RootState> = {
   [MutaionTypes.SET_NEWS]: (state: RootState, news: NewsItem[]) => {
     state.news = news;
   },
