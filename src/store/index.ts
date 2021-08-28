@@ -1,34 +1,14 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
-import mutations from './mutaions.js';
+import Vuex, { StoreOptions } from 'vuex';
+import mutations from './mutaions';
 import actions from './actions';
-import { state } from './state';
+import { state, RootState } from './state';
 
 Vue.use(Vuex);
 
-const store = {
+const store: StoreOptions<RootState> = {
   state,
+  mutations,
 };
 
 export default new Vuex.Store(store);
-
-// export default new Vuex.Store({
-//   state: {
-//     news: [],
-//     jobs: [],
-//     ask: [],
-//     user: {},
-//     item: {},
-//     list: [],
-//   },
-//   getters: {
-//     fetchedAsk(state) {
-//       return state.ask;
-//     },
-//     fetchedItem(state) {
-//       return state.item;
-//     },
-//   },
-//   mutations: mutations,
-//   actions: actions,
-// });

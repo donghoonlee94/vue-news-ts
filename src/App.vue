@@ -36,7 +36,6 @@ export default Vue.extend({
   created() {
     Bus.$on('start:spinner', this.startSpinner);
     Bus.$on('end:spinner', this.endSpinner);
-    console.log(process.env.VUE_APP_TITLE);
     this.$store.state;
   },
   // 이벤트 버스는 이벤트 객체가 계속 쌓이기 때문에 오프롤 꼭 해줘야 한다.
