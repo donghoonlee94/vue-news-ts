@@ -9,6 +9,7 @@ Vue.use(Vuex);
 const store: StoreOptions<RootState> = {
   state,
   mutations,
+  actions,
 };
 
 export default new Vuex.Store(store);
