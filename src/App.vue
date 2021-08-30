@@ -13,6 +13,7 @@ import Vue from 'vue';
 import ToolBar from './components/ToolBar.vue';
 import Spinner from './components/Spinner.vue';
 import Bus from './utils/bus';
+import { MutaionTypes } from './store/mutations';
 
 export default Vue.extend({
   data() {
@@ -36,7 +37,8 @@ export default Vue.extend({
   created() {
     Bus.$on('start:spinner', this.startSpinner);
     Bus.$on('end:spinner', this.endSpinner);
-    this.$store.state;
+    // this.$store.commit(MutaionTypes.SET_NEWS, 99);
+    // this.$store.commit('SET_CODE', 99);
   },
   // 이벤트 버스는 이벤트 객체가 계속 쌓이기 때문에 오프롤 꼭 해줘야 한다.
   beforeDestroy() {

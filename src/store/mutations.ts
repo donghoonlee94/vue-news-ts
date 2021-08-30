@@ -6,7 +6,7 @@ enum MutaionTypes {
   SET_NEWS = 'SET_NEWS',
 }
 
-const mutations: MutationTree<RootState> = {
+const mutations = {
   [MutaionTypes.SET_NEWS]: (state: RootState, news: NewsItem[]) => {
     state.news = news;
   },
@@ -14,7 +14,7 @@ const mutations: MutationTree<RootState> = {
 
 type Mutations = typeof mutations;
 
-export { mutations, Mutations };
+export { mutations, Mutations, MutaionTypes };
 
 // export default {
 //   SET_NEWS(state, news) {

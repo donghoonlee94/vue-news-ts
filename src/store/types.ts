@@ -11,4 +11,5 @@ type MyMutations = {
   ): ReturnType<Mutations[K]>;
 };
 
+// 이미 Store에 있는 commit을 제거하고, 새로운 Mutation을 인터섹션함으로써 스토어의 타입을 재 정의함.
 export type MyStore = Omit<Store<RootState>, 'commit'> & MyMutations;
